@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #f3f0f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0,0.5);
+  padding: 35px;
+}
+
+.container.start .result p{
+   opacity: 0;
+}
+.container.start .user{
+    transform-origin:right ;
+  animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform:rotate(10deg);
+    }
+}
+
+.container.start .cpu{
+    transform-origin:left ;
+   animation: cpuShake 0.7s ease infinite;
+
+}
+@keyframes cpuShake {
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+
+.container.start .option-image{
+  pointer-events: none;
+}
+.result img{
+    height: 150px;
+}
+.result {
+    display: flex;
+    column-gap: 15rem;
+    padding: 15px;
+    margin: 20px;
+}
+.user img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.cpu img{
+    transform:rotate(90deg);
+}
+
+.result p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #7D2AE8;
+}
+.text{
+    text-align: center;
+    color:#000;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.options img{
+    height: 90px;
+}
+
+.options{
+    margin: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.options p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #7D2AE8;
+}
+.option-image{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.option-image:hover{
+    opacity:1;
+}
+
+.option-image.active{
+    opacity:1;
+}
+
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+   
+body{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+  border-radius: 5px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0,0.5);
+  padding: 0px;
+}
+
+.result img{
+    height:100px;
+}
+.result {
+    display: flex;
+    column-gap: 2.5rem;
+    padding: 15px;
+    margin: 20px;
+}
+
+.options img{
+    height: 75px;
+}
+
+.options{
+    margin: 50px 10px;
+}
+
+.option-image{
+    margin: 18px;
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.option-image:hover{
+    opacity:1;
+}
+
+.option-image.active{
+    opacity:1;
+}
+
+}
